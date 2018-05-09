@@ -1,0 +1,366 @@
+/*---------- 1. HEADER Style  ----------*/
+
+.main-header {
+    background-color: $header-color;
+    position: relative;
+    width: 100%;
+}
+
+.navbar {
+    padding: 1.5rem 1rem;
+    -webkit-webkit-transition: all 0.5s;
+    -moz-webkit-transition: all 0.5s;
+    -ms-webkit-transition: all 0.5s;
+    -o-webkit-transition: all 0.5s;
+    webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.bg-inverse {
+    background-color: $header-color;
+}
+
+.navbar-dark {
+    .navbar-nav {
+    	padding-top: 20px;
+        .nav-link {
+            color: $text-color;
+            font-size: 13px;
+            font-family: 'Myriad Pro';
+            text-transform: uppercase;
+        }
+    }
+}
+
+/* Styling the header when scrolling*/
+
+.cbp-af-header-shrink {
+	opacity: 0.8;
+	padding: 0.6rem 0.8rem;
+}
+
+@media (max-width: 544px) {
+	.navbar-dark {
+	    .navbar-nav {
+	    	padding: 0px;
+		}
+	}
+
+    .navbar {
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 325px) {
+
+	.navbar {
+		padding: 0 1rem;
+	}
+
+	.navbar-toggler {
+		padding: 1rem 3rem 0 0; 
+	}
+}
+
+
+/*---------- 2. FEATURED SECTION Style  ----------*/
+
+.featured-section {
+	padding-top: 50px;
+	position: relative;
+	img {
+		max-height: 645px;
+		width: 100%;
+	}
+	h1 {
+		font-size: 80px;
+		text-transform: uppercase;
+	}
+
+	.featured-section--heading {
+		color: $header-color;
+		@extend h1;
+	}
+}
+
+.down-btn {
+	bottom:20px;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	z-index: 10;
+}
+
+@media (max-width: 740px) {
+
+	.featured-section {
+		h1 {
+			font-size: 30px;
+		}
+
+		.featured-section--heading {
+			font-size: 30px;
+		}
+	}
+}
+
+@media (max-width: 800px) {
+
+	.down-btn {
+		display: none;
+	}
+}
+
+@media (min-width: 544px) {
+    .carousel-caption {
+        top: 20%;
+    }
+}
+
+
+/*----------3.  PRODUCTS Section Style - OWL Carousel  ----------*/
+
+.products-section {
+	margin-top: $theme-margin;
+	text-align: center;
+	
+	h1 {
+		color: $header-color;
+		font-weight: bold;
+		font-size: 38px;
+		text-transform: uppercase;
+	}
+}
+
+.owl-carousel {
+	margin: 2rem 0 $theme-margin;
+
+	.owl-nav.disabled {
+	    display: block; 
+	}
+	
+	.owl-nav {
+		position: relative;
+	}
+
+	.owl-next,
+	.owl-prev {
+		position: absolute;
+		bottom: 50px;
+	}
+
+	.owl-next {
+		right: 0;
+	}
+}
+
+@media (max-width: 600px) {
+	
+	.owl-next,
+	.owl-prev {
+		img {
+			width: 50%;
+		}
+	}
+}
+
+@media (max-width: 540px) {
+
+	.products-section {
+
+		h1 {
+			font: {
+				size: 20px;
+			}
+		}
+	}
+}
+
+@media (max-width: 400px) {
+	
+	.owl-next,
+	.owl-prev {
+		img {
+			width: 15%;
+		}
+	}
+}
+
+/*----------4.  Big Picture Section Style  ----------*/
+
+
+ .big-img-section {
+ 	position: relative;
+
+ 	.caption {
+ 		position: absolute;
+ 		right: 15%;
+ 		top: 30%;
+ 		left: 15%;
+ 		z-index: 10;
+ 		padding-top: 20px;
+ 		padding-bottom: 20px;
+ 		color: $text-color;
+ 		text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+
+ 		h2 {
+ 			font: {
+ 				size: 38px;
+ 				weight: bold;
+ 			}
+ 			text-transform: uppercase;
+ 		}
+
+ 		p {
+ 			font: {
+ 				size: 15px;
+ 			}
+ 		}
+ 	}
+}
+
+ @media (max-width: 540px) {
+	.big-img-section {
+
+		.caption {
+			top: 15%;
+ 		h2 {
+ 			font-size: 20px;
+ 		}
+
+ 		p {
+ 			font-size: 10px;
+ 		}
+ 	}
+}
+ 	
+}
+
+
+/*----------5.  EXPERIENCES Section Style  ----------*/
+
+.exp-section {
+	padding: $theme-margin 0;
+	text-align: center;
+
+	h2 {
+		color: #000;
+		font: {
+			size: 38px;
+			weight: bold
+		}
+		padding-bottom: $theme-margin;
+		text-transform: uppercase;
+	}
+
+	p {
+		font: {
+			size: 16px;
+		}
+	}
+}
+
+@media (max-width: 540px) {
+
+	.exp-section {
+		h2 {
+			font-size: 20px;
+		}
+	}
+}
+
+/*----------6.  CONTACT Section Style  ----------*/
+
+
+.contact-section {
+	background-color: #4c5e84;
+	padding-bottom: $theme-margin;
+	text-align: center;
+
+	h2 {
+		color: $text-color;
+		font: {
+			size: 38px;
+			weight: bold;
+		}
+		margin-top: 1.2rem;
+		text-transform: uppercase;
+	}
+
+	p {
+		color: $text-color;
+	}
+	
+	img{
+		display: block;
+		max-width: 100%;
+		height: auto;
+		
+	}
+
+	address,
+	form {
+		padding-top: $theme-margin/2;
+	}
+
+	address {
+		color: $text-color;
+		text-align: left;
+	}
+
+}
+
+@media (max-width: 540px) {
+
+	.contact-section {
+		h2 {
+			font: {
+				size: 20px;
+			}
+		}
+	}
+}
+
+/*----------7.  FOOTER Section Styles  ----------*/
+.footer-section {
+	background-color: $footer-color;
+	padding-top: $theme-margin/2;
+}
+
+.footer-nav {
+	list-style-type: none;
+
+	h3 {
+		color: $text-color;
+		text-tranform: uppercase;
+	}
+
+	a {
+		color: rgba($text-color, 0.75);
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	.social {
+		padding-top: 30px;
+		ul {
+			list-style-type: none;
+		}
+		li {
+			float: left;
+			padding-left: 25px;
+
+			&:first-child {
+				padding-left: 0;
+			}
+		}
+		
+		.fa {
+			font: {
+				size: 20px;
+			}
+		}
+	}
+}
